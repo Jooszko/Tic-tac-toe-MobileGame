@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+        <style name="AlertDialogCustom" parent="@android:style/Theme.Dialog">
+            <item name="android:textColor">#1F51FF</item>
+            <item name="android:textSize">30sp</item>
+            <item name="android:width">250dp</item>
+            <item name="android:height">30dp</item>
+            <item name="android:background">#171032</item>
+
+<!--            <item name="android:background">@drawable/bg2</item>-->
+        </style>
+</resources>

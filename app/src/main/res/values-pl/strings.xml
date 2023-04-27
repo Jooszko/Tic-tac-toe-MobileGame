@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Kołko-Krzyżyk</string>
+    <string name="main1">Z kim chcesz zagrać?</string>
+    <string name="main2">Komputer</string>
+    <string name="main3">Gracz</string>
+    <string name="playerActivity1">Zagrajmy!</string>
+    <string name="gameAi1">Wygrywasz!</string>
+    <string name="gameAi2">Komputer wygrywa!</string>
+    <string name="gamePlayer1">Wygrywa krzyżyk!</string>
+    <string name="gamePlayer2">Wygrywa kółko!</string>
+    <string name="gameAi3">Wybierz pozim trudności</string>
+    <string name="gameAi4">Łatwy</string>
+    <string name="gameAi5">Średni</string>
+    <string name="gameAi6">Trudny</string>
+</resources>

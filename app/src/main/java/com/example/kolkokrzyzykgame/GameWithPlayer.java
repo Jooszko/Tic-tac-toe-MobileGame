@@ -14,15 +14,16 @@ import java.util.List;
 public class GameWithPlayer extends AppCompatActivity {
 
     public static String WHOWIN = "whowin";
+    public static String WHOWINDRAW = "draw";
      private ImageView circle1, circle2, circle3, circle4, circle5, circle6, circle7, circle8, circle9;
      private ImageView cross1, cross2, cross3, cross4, cross5, cross6, cross7, cross8, cross9;
 
      private ConstraintLayout box1, box2, box3, box4, box5, box6, box7, box8, box9;
-     private ConstraintLayout winScreen;
 
      private Boolean round = true;
      private Integer[] gameTable = {0,0,0,0,0,0,0,0,0};
-     private boolean whoWin;
+     private Integer roundCounter = 0;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,7 +60,7 @@ public class GameWithPlayer extends AppCompatActivity {
         box8 = findViewById(R.id.box8);
         box9 = findViewById(R.id.box9);
 
-        winScreen = findViewById(R.id.winScreenPlayer);
+
 
         box1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -244,6 +245,8 @@ public class GameWithPlayer extends AppCompatActivity {
     }
 
      private boolean cheackWin(){
+        roundCounter+=1;
+
         //horizontal line
          if(gameTable[0]==gameTable[1] && gameTable[0]==gameTable[2] && (gameTable[0]==1 || gameTable[0]==2)){
             return true;
@@ -263,22 +266,25 @@ public class GameWithPlayer extends AppCompatActivity {
              return true;
          }else if (gameTable[2]==gameTable[4] && gameTable[2]==gameTable[6] && (gameTable[2]==1 || gameTable[2]==2)) {
              return true;
-         }else{
-             return false;
+         }else if (roundCounter==9){
+             Intent intent = new Intent(GameWithPlayer.this, MainActivity.class);
+             intent.putExtra(WHOWINDRAW, true);
+             startActivity(intent);
+             finish();
          }
-    }
+         return false;
+     }
 
     private void winGame(){
-//        winScreen.setVisibility(View.VISIBLE);
-        String whoWin = "";
+        String whoWinNr = "";
         Intent intent = new Intent(GameWithPlayer.this, MainActivity.class);
         if (round){
-            whoWin = "1";
+            whoWinNr = getString(R.string.gamePlayer1);
         }else{
-             whoWin = "2";
+            whoWinNr = getString(R.string.gamePlayer2);
         }
 
-        intent.putExtra(WHOWIN, whoWin);
+        intent.putExtra(WHOWIN, whoWinNr);
         startActivity(intent);
         finish();
 

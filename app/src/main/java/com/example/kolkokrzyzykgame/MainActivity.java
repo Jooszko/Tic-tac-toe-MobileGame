@@ -24,15 +24,33 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         if(getIntent().hasExtra(GameWithPlayer.WHOWIN)){
-//            AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
-//            alertDialogBuilder.setTitle("Gratulacje wygrywa gracz nr " + getIntent().getStringExtra(GameWithPlayer.WHOWIN));
-//            alertDialogBuilder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-//                @Override
-//                public void onClick(DialogInterface dialogInterface, int i) {
-//
-//                }
-//            });
-//            alertDialogBuilder.show();
+//            AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this, R.style.AlertDialogCustom);
+            AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+            alertDialogBuilder.setTitle(getIntent().getStringExtra(GameWithPlayer.WHOWIN));
+            alertDialogBuilder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+
+                }
+            });
+            alertDialogBuilder.show();
+
+
+
+
+
+        }
+
+        if(getIntent().hasExtra(GameWithPlayer.WHOWINDRAW)){
+            AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+            alertDialogBuilder.setTitle("Remis!");
+            alertDialogBuilder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+
+                }
+            });
+            alertDialogBuilder.show();
 
 
 

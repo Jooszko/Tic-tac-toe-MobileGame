@@ -1,3 +1,15 @@
 <resources>
-    <string name="app_name">KolkoKrzyzykGame</string>
+    <string name="app_name">" Tic-tac-toe"</string>
+    <string name="main1">Who do you want to play with?</string>
+    <string name="main2">Computer</string>
+    <string name="main3">Player</string>
+    <string name="playerActivity1">Let\'s play!</string>
+    <string name="gameAi1">You win!</string>
+    <string name="gameAi2">The computer wins!</string>
+    <string name="gamePlayer1">Cross wins!</string>
+    <string name="gamePlayer2">Circle wins!</string>
+    <string name="gameAi3">Choose a difficulty level</string>
+    <string name="gameAi4">Easy</string>
+    <string name="gameAi5">Medium</string>
+    <string name="gameAi6">Hard</string>
 </resources>
